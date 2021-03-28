@@ -1,0 +1,39 @@
+0) a) function a(){
+    this.b=10}
+   b) var c=new a()
+   c) var e={name:"tohid"}
+
+
+1) c.constructor
+=> ƒ a(){
+    this.b=10}
+c.__proto__.constructor
+=>ƒ a(){
+    this.b=10}
+c.__proto__.__proto__.constructor
+=>ƒ Object() { [native code] }
+
+e.constructor
+=> ƒ Object() { [native code] }
+
+3) i) a.prototype===Object.getPrototypeOf(c)(TRUE)
+   ii) c.constructor===Object.getPrototypeOf(c).constructor===a.prototype.constructor(TRUE)
+
+4) i) c.__proto__
+=>  {constructor: ƒ}
+           constructor: ƒ a()
+                 __proto__: Object
+
+ii) c.__proto__.__proto__
+=> {constructor: ƒ, __defineGetter__: ƒ, __defineSetter__: ƒ, hasOwnProperty: ƒ, __lookupGetter__: ƒ, …}
+             constructor: ƒ Object()
+             hasOwnProperty: ƒ hasOwnProperty()
+             isPrototypeOf: ƒ isPrototypeOf().............
+
+iii) c.__proto__.__proto__.__proto__(NULL)
+
+iv) e.__proto__
+=> {constructor: ƒ, __defineGetter__: ƒ, __defineSetter__: ƒ, hasOwnProperty: ƒ, __lookupGetter__: ƒ, …}
+             constructor: ƒ Object()
+             hasOwnProperty: ƒ hasOwnProperty()
+             isPrototypeOf: ƒ isPrototypeOf().............
