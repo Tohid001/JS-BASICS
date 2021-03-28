@@ -1,0 +1,5 @@
+ =>var c={}
+   =>function a(){this.name="tohid"}
+   =>c.constructor(ƒ Object() { [native code] })
+   =>c.constructor=a({constructor:a})
+   =>c.name(undefined because it's not a prototype!)
